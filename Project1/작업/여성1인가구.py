@@ -25,4 +25,4 @@ womandata = womandata.loc[womandata["성별"]=="여자", ["자치구", "성별",
 
 womandata
 womandata.to_csv('실습결과.csv', index=False, encoding="euc-kr")
-# 앞에 숫자가 index인데 이걸 false로 하고 저장함, encoding euc-kr로 하면 깨지지 않음
+# 앞에 숫자 뜨는게 index인데 이걸 false로 하고 저장함, encoding euc-kr로 하면 오류 지 않음
