@@ -15,12 +15,13 @@ womandata.rename(columns = {'주택(거처)의 종류.1':'단독주택', '주택
                             # 보기 힘드니까 열 이름들을 제대로 바꿔줌 (csv로 바꾸면서 틀어진거)
 womandata
 
-# womandata = womandata.drop([0, 0], axis = 0) # 행을 지움 # 데이터프레임은 axis 1
+# womandata = womandata.drop([0, 1], axis = 0) # 1행을 지움 # 데이터프레임은 axis 1
 # 여자만 추출하면 굳이 행을 지울 필요가 없음
+# 합계를 지우고싶으면 # 제거하기
 
 womandata = womandata.loc[womandata["성별"]=="여자", ["자치구", "성별", "합계", "단독주택", "아파트", "연립주택",
                                       "다세대주택", "비거주용 건물내 주택", "주택이외의 거처"]]
-# loc를 써서 필요한 행과 열만 추출, 행에선 여자인 행만 추출하고 열에선 필요한 열을
+# loc를 써서 필요한 행과 열만 추출, 행에선 여자인 행만 추출하고 열에선 필요한 열을 추출함
 
 womandata
 womandata.to_csv('실습결과.csv', index=False, encoding="euc-kr")
