@@ -19,11 +19,6 @@ womandata.rename(columns = {'주택(거처)의 종류.1':'단독주택', '주택
                             '주택(거처)의 종류.5':'비거주용 건물내 주택'
                             }, inplace=True) # 보기 힘드니까 열 이름들을 제대로 바꿔줌
                                              # 원래 제대로 나와 있는데 csv로 바꾸면서 틀어진거
-womandata
-
-# womandata = womandata.drop([0, 1], axis = 0) # 1행을 지움 # 데이터프레임은 axis 1
-# 합계를 지우고싶으면 # 제거하기
-# 여자만 추출하면 굳이 행을 지울 필요가 없어 주석 처리
 
 womandata = womandata.loc[womandata["성별"]=="여자", ["자치구", "성별", "합계", "단독주택", "아파트", "연립주택",
                                       "다세대주택", "비거주용 건물내 주택", "주택이외의 거처"]]
@@ -80,5 +75,8 @@ end.rename(columns = {'자치구':'District', '면적당 1인 가구 수':'Onepe
 # true 안붙이면 복사본이 생성됨
 end
 
-end.to_csv('Onepersonhouseholds.csv', index=False, encoding="euc-kr")
+end = end.drop(index=[3]) # index 3인 합계를 지움
+end
+
+end.to_csv('Onepersonhouseholds.csv', index=False, encoding="euc-kr") # 변수이름 수정하기
 # 앞에 숫자가 index인데 이걸 false로 하고 저장함, encoding euc-kr로 하면 깨지지 않음
