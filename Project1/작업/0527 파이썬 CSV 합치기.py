@@ -44,7 +44,7 @@
 # print(sum)
 
 # 본문 코드
-# 밑이 진ㅉ
+# 밑이 되는 코드임
 
 import pandas as pd
 import numpy as np
@@ -52,7 +52,6 @@ import numpy as np
 crime = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/crime_seoul.csv", encoding="euc-kr")
 oneperson = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/Oneperson.csv", encoding="euc-kr")
 cctv = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/pub_seoul.csv", encoding="euc-kr")
-
 
 j = 0;
 summ = crime # 안에 아무것도 없으면 이상한 내용으로 출력됨
