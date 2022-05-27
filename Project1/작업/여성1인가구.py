@@ -60,6 +60,7 @@ test.info
 # test.columns = ['면적당 1인 가구 수']
 # test
 # ★ 안되어서 직접 합치고 바꿈...
+# test["C"] = np.nan # 새 열 추가하고 이름 바꾸려고 했으나 행이 추가됨 ㅠㅠ..
 
 womandata = pd.concat([womandata, test], axis=1) # axis=1이 없으면 NaN 값으로 나옴
 womandata
