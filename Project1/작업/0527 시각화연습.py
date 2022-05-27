@@ -5,7 +5,7 @@ print(currentPath)
 
 file=currentPath+"\Rpython\data_comb.csv"
 data=pd.read_csv(file , encoding = "euc-kr")
-data.drop(['Unnamed: 0'], axis=1, inplace=True) # 열지움, 바로반영
+data.drop(['Unnamed: 0'], axis=1, inplace=True) # 인덱스 열지움, 바로반영
 data
 
 ------ 직선그래프
