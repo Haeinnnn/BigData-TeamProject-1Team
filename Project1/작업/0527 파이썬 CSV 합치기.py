@@ -11,12 +11,28 @@ import os
 # 어떤 파일들이 들어있는지 확인
 # print(output)
 
+# forders = os.listdir('C:\BigData\work\R_Project\ch011\RPython')
+# print(forders)
+
 # groups = df_all.groupby('District') # 지역명으로 그룹을 만듦
 # groups.size() # 각 지역명이 몇개나 되는지 확인
 
-crime = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/crime_seoul.csv", encoding="euc-kr")
-oneperson = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/Oneperson.csv", encoding="euc-kr")
-cctv = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/pub_seoul.csv", encoding="euc-kr")
+# forders = os.listdir('C:\BigData\work\R_Project\ch011\RPython')
+# print(forders)
+
+# df_all = pd.DataFrame()
+# for i in range(0,len(forders)):
+#     if forders[i].split('.')[1] == 'csv':
+#         file = 'C:\BigData\work\R_Project\ch011\RPython/'+forders[i]
+#         df= pd.read_csv(file,encoding='euc-kr') 
+#         df_all = pd.concat([df_all, df])
+#
+# crime = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/crime_seoul.csv", encoding="euc-kr")
+# oneperson = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/Oneperson.csv", encoding="euc-kr")
+# cctv = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/pub_seoul.csv", encoding="euc-kr")
+
+# df_all
+# 그룹별로 합치는 코드인데... 기준점을 정할 수 없었음 출처 : https://javapp.tistory.com/169
 
 # ---- 원래 썼던 코드
 # pd.merge(crime, cctv, left_on='District', right_on='District')
