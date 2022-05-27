@@ -1,10 +1,10 @@
 # 머지로 파이썬 합치기
 # 머지의 단점 = 2개밖에 안됨, for 문으로 돌리는거 생각해보기
 
-import pandas as pd
-import numpy as np
-import glob
-import os
+# import pandas as pd
+# import numpy as np
+# import glob
+# import os
 
 # output = glob.glob('C:\BigData\work\R_Project\ch011\Rpython\*.csv')
 # r로 시작하는 다른 방식이랑 차이가 없음
@@ -26,10 +26,6 @@ import os
 #         file = 'C:\BigData\work\R_Project\ch011\RPython/'+forders[i]
 #         df= pd.read_csv(file,encoding='euc-kr') 
 #         df_all = pd.concat([df_all, df])
-#
-# crime = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/crime_seoul.csv", encoding="euc-kr")
-# oneperson = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/Oneperson.csv", encoding="euc-kr")
-# cctv = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/pub_seoul.csv", encoding="euc-kr")
 
 # df_all
 # 그룹별로 합치는 코드인데... 기준점을 정할 수 없었음 출처 : https://javapp.tistory.com/169
@@ -48,6 +44,16 @@ import os
 # print(sum)
 
 # 본문 코드
+# 밑이 진ㅉ
+
+import pandas as pd
+import numpy as np
+
+crime = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/crime_seoul.csv", encoding="euc-kr")
+oneperson = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/Oneperson.csv", encoding="euc-kr")
+cctv = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/pub_seoul.csv", encoding="euc-kr")
+
+
 j = 0;
 summ = crime # 안에 아무것도 없으면 이상한 내용으로 출력됨
 ttest = [cctv, oneperson] # 합칠 csv들
