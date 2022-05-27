@@ -79,5 +79,8 @@ end
 end = end.drop(index=[3]) # index 3인 합계를 지움
 end
 
+end = end.sort_values('District', ascending=True) # 지역이름인 ㄱㄴㄷ 순으로 정렬해줌
+end
+
 end.to_csv('Onepersonhouseholds.csv', index=False, encoding="euc-kr") # 변수이름 수정하기
 # 앞에 숫자가 index인데 이걸 false로 하고 저장함, encoding euc-kr로 하면 깨지지 않음
