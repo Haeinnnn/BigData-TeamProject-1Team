@@ -18,6 +18,4 @@ plt.xticks([1], ['Crime'])
 plt.show()
 
 # -- seaborn 으로 boxplot
-boxplot= sns.boxplot(y='Crime',
-                   data=data,
-                  )
+boxplot= sns.boxplot(y='Crime', data=data)
