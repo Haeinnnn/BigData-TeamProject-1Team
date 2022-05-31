@@ -19,6 +19,6 @@ plt.rcParams['font.size'] = 10 # 폰트 사이즈 조정
 mpl.rcParams['axes.unicode_minus'] = False # - 깨지는 현상
 plt.rcParams['figure.figsize'] = (15, 10)
 
-line = sns.lineplot(x="District", y="Crime", data=data) # 단순선형회귀식
+line = sns.lineplot(x="District", y="Crime", color='green', data=data) # 단순선형회귀식
 
 # 출처 : https://dsbook.tistory.com/52
