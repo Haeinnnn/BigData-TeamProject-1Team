@@ -23,7 +23,7 @@ plt.rcParams['figure.figsize'] = (15, 10)
 
 line = sns.lineplot(x="District", y="Crime", color='green', data=data) # 단순선형회귀식
 
-# -- MATPLOTLIB 회귀식
+# -- matplotlib 회귀식
 from sklearn.linear_model import LinearRegression
 lr = LinearRegression()
 
