@@ -34,3 +34,5 @@ import statsmodels.formula.api as smf
 
 res = smf.ols(formula='Crime ~ Police + CCTV + Oneperson + Pub', data=data).fit()
 print(res.summary())
+
+# 출처 : https://m.blog.naver.com/kiddwannabe/221763497317
