@@ -1,9 +1,16 @@
+# ============================================================================================
+# 파이썬에서 패키지를 사용하도록 설정
+# ============================================================================================
+import pandas as pd # 분석용 파이썬 라이브러리 패키지import numpy as np
+# 계산용 파이썬 라이브러리 패키지# 위에 패키지들이 없으면 !pip install pandas, numpy 해주기
 import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+# ============================================================================================
+# 데이터 셋 로딩하기 (csv 파일을 pandas의 데이터 프레임으로 불러오려면 pd.read_csv())
+# ============================================================================================
 data = pd.read_csv("C:/BigData/work/R_Project/ch011/Rpython/data_comb.csv", encoding="euc-kr")
 
 # -- 피어스만 상관분석
