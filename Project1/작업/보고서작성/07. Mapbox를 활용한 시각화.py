@@ -13,7 +13,7 @@ from mapboxgl.utils import create_color_stops # 색을 입히기 위한 파이�
 # ============================================================================================
 # crime 파일 불러와서 시각화 하기
 # ============================================================================================
-geo_data = 'Seoul_Crime.geo.json' # 미리만들어둔 지도 geojson 파일
+geo_data = 'Seoul_crime.geo.json' # 미리만들어둔 지도 geojson 파일
 
 # json 파일이라 파이썬 파일 읽기
 import json
@@ -35,11 +35,11 @@ color_stops = create_color_stops(color_breaks, colors='OrRd')
 viz = ChoroplethViz(
     access_token=token, # 자신의 mapbox 계정 api token
     data=data, # json 데이터
-    color_property='Crime', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
+    color_property='crime', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
     zoom=10, # 지도의 줌 레벨
-    label_property='Crime') # 지도에 영문이름 출력
+    label_property='crime') # 지도에 영문이름 출력
 
 # 맵을 출력
 viz.show()
