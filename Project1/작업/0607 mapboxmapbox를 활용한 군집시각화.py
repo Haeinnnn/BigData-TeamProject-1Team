@@ -31,14 +31,23 @@ viz = ChoroplethViz(
     color_property='Safety_var', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
-    zoom=9.5, # 지도의 줌 레벨
-    label_property='Rank') # 지도에 영문이름 출력
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='Rank', # 지도에 Rank 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left', # 스케일의 위치
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 
 
 # 맵을 출력합니다.
 viz.show()
 
-
 # -- 안전지수가 가장 낮은곳 5곳을 red로
+from mapboxgl.viz import *
+import os
+from mapboxgl.utils import create_color_stops
+from mapboxgl.utils import create_numeric_stops
+
 geo_data = 'Result.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -58,7 +67,11 @@ match_color_stops = [
     ['동작구', '#EA5330'], 
     ['관악구', '#EF9884'],
     ['중구', '#FAC0B1'],
-    ['광진구', '#FFE1D7']]
+    ['광진구', '#FFE1D7']
+    
+]
+# 색 반전하는 기능이 없어서 반전 색 사용
+
 
 # ChoroplethViz (지리적 영역 범위별 수치 데이터 값을 색(color)으로 표현) 그리기
 viz = ChoroplethViz(
@@ -67,16 +80,26 @@ viz = ChoroplethViz(
     color_property='name', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_function_type='match',
     color_stops=match_color_stops, # 시각화할 색상과 각 색상의 범주 값
-    color_default='rgba(52,73,94,1)',
+    color_default='rgba(190,190,190,0.5)', # 선택되지 않은 지역의 디폴트색 지정
     center=center, # 지도의 중심점
-    zoom=9.5, # 지도의 줌 레벨
-    label_property='name') # 지도에 영문이름 출력
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 영문이름 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left', # 스케일의 위치
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 
 
 # 맵을 출력합니다.
 viz.show()
 
 
 # -- 5곳을 제외한 나머지 곳을 green으로
+from mapboxgl.viz import *
+import os
+from mapboxgl.utils import create_color_stops
+from mapboxgl.utils import create_numeric_stops
+
 geo_data = 'Result.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -92,27 +115,32 @@ center = [126.986, 37.565]
 
 # 시각화 할 값에 따른 색상의 범주를 지정해줍니다.
 match_color_stops = [
-    ['서초구', '#274E2C'],
-    ['종로구', '#274E2C'],
-    ['도봉구', '#274E2C'],
-    ['노원구', '#274E2C'],
-    ['강북구', '#20A844'],
-    ['은평구', '#20A844'],
-    ['용산구', '#20A844'],
-    ['성동구', '#20A844'],
-    ['성북구', '#44B390'],
-    ['강서구', '#44B390'],
-    ['강남구', '#44B390'],
-    ['강동구', '#44B390'],
-    ['양천구', '#40CF53'],
-    ['송파구', '#40CF53'],
-    ['구로구', '#40CF53'],
-    ['서대문구', '#40CF53'],
-    ['마포구', '#90D5A2'],
-    ['영등포구', '#90D5A2'],
-    ['중랑구', '#90D5A2'],
-    ['금천구', '#90D5A2']] # 색 5개 4개씩
-
+    ['중구', '#720000'],
+    ['강남구', '#2669b9'],
+    ['관악구', '#2669b9'],
+    ['광진구', '#2669b9'],
+    ['구로구', '#2669b9'],
+    ['금천구', '#2669b9'],
+    ['동대문구', '#2669b9'],
+    ['동작구', '#2669b9'],
+    ['서대문구', '#2669b9'],
+    ['성동구', '#2669b9'],
+    ['성북구', '#2669b9'],
+    ['양천구', '#2669b9'],
+    ['영등포구', '#2669b9'],
+    ['중랑구', '#2669b9'],
+    ['강동구', '#69A65A'],
+    ['강북구', '#69A65A'],
+    ['강서구', '#69A65A'],
+    ['노원구', '#69A65A'],
+    ['도봉구', '#69A65A'],
+    ['마포구', '#69A65A'],
+    ['송파구', '#69A65A'],
+    ['용산구', '#69A65A'],
+    ['은평구', '#69A65A'],
+    ['종로구', '#69A65A'],
+    ['서초구', '#69A65A']
+]
 
 # ChoroplethViz (지리적 영역 범위별 수치 데이터 값을 색(color)으로 표현) 그리기
 viz = ChoroplethViz(
@@ -121,10 +149,13 @@ viz = ChoroplethViz(
     color_property='name', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_function_type='match',
     color_stops=match_color_stops, # 시각화할 색상과 각 색상의 범주 값
-    color_default='rgba(52,73,94,0)', # 아예 투명하게
     center=center, # 지도의 중심점
-    zoom=9.5, # 지도의 줌 레벨
-    label_property='name') # 지도에 영문이름 출력
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 영문이름 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left') # 스케일의 위치
 
 # 맵을 출력합니다.
 viz.show()
