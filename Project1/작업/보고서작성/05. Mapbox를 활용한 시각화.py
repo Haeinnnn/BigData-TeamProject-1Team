@@ -39,7 +39,7 @@ viz = ChoroplethViz(
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
     zoom=9.5, # 지도의 줌 레벨
-    label_property='name') # 지도에 구 이름 같이 출력
+    label_property='district') # 지도에 구 이름 같이 출력
 
 # 맵을 출력
 viz.show()
