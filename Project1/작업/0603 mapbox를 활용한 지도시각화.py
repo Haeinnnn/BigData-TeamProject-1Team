@@ -4,6 +4,7 @@ from mapboxgl.utils import create_color_stops
 from mapboxgl.utils import create_numeric_stops
 
 # ------------------------------ Crime 파일
+
 geo_data = 'Seoul_Crime.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -29,14 +30,19 @@ viz = ChoroplethViz(
     color_property='Crime', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
-    zoom=10, # 지도의 줌 레벨
-    below_layer='waterway-label', # 지도에 영문이름 출력
-    label_property='Crime') # 지도에 Crime의 데이터값 표시
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 구 이름 같이 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left',
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 # 스케일의 위치
 
 # 맵을 출력합니다.
 viz.show()
 
 # ---------------------------- Pub 파일
+
 geo_data = 'Seoul_Pub.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -62,13 +68,19 @@ viz = ChoroplethViz(
     color_property='Pub', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
-    zoom=10, # 지도의 줌 레벨
-    below_layer='waterway-label') # 지도에 영문이름 출력
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 구 이름 같이 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left', # 스케일의 위치
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 
 
 # 맵을 출력합니다.
 viz.show()
 
 # ---------------------------------- Oneperson 파일
+
 geo_data = 'Seoul_Oneperson.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -94,18 +106,19 @@ viz = ChoroplethViz(
     color_property='Oneperson', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
-    zoom=10, # 지도의 줌 레벨
-    below_layer='waterway-label') # 지도에 영문이름 출력
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 구 이름 같이 출력
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left', # 스케일의 위치
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 
 
 # 맵을 출력합니다.
 viz.show()
 
-from mapboxgl.viz import *
-import os
-from mapboxgl.utils import create_color_stops
-from mapboxgl.utils import create_numeric_stops
-
 # ----------------------------- CCTV 파일
+
 geo_data = 'Seoul_CCTV.geo.json'
 
 # json 파일이라 파이썬 파일 읽기
@@ -131,8 +144,13 @@ viz = ChoroplethViz(
     color_property='CCTV', # 데이터 내 속성에서 시각화 할 색의 기준이 될 속성
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
-    zoom=10, # 지도의 줌 레벨
-    below_layer='waterway-label') # 지도에 영문이름 출력 # 이거 쓰면 안됨 데이터 일부 출력안됨 ㅡㅡ
+    zoom=9.8, # 지도의 줌 레벨
+    label_property='name', # 지도에 Oneperson 데이터값 표시
+    label_size=8.5, # 데이터값의 크기 조정
+    label_halo_width=0.75, # 데이터값의 테두리 조정
+    scale=True, # 얼마나 위에서 보고있는지 표기
+    scale_position='bottom-left', # 스케일의 위치
+    legend_header_fill='rgba(190,190,190,0.5)') # 범례 헤더 색상지정 
 
 # 맵을 출력합니다.
 viz.show()
@@ -140,3 +158,6 @@ viz.show()
 # 출처 : https://kimdingko-world.tistory.com/187
 # 출처 : https://80000coding.oopy.io/80236516-709b-46a0-8a51-e92357e1b66e
 # 출처 : https://dailyheumsi.tistory.com/145
+# below_layer='waterway-label') # 지도에 영문이름 출력 # 이거 쓰면 안됨 데이터 일부 출력안됨 ㅡㅡ
+# 출처 : http://geojson.io/#map=2/20.0/0.0
+# 출처 : https://github.com/mapbox/mapboxgl-jupyter/blob/master/docs/viz.md
