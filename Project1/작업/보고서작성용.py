@@ -26,14 +26,13 @@ token = 'pk.eyJ1IjoiZWVoZWFpbmVlIiwiYSI6ImNsM3RpZjFpczA5aXIzY3FwdHpyeHdvc2MifQ.k
 center = [126.986, 37.565]
 
 #----------------------------------------------------------------------------
-# 시각화 할 값에 따른 색상의 범주를 지정해줍니다.
+# ChoroplethViz (지리적 영역 범위별 수치 데이터 값을 색(color)으로 표현) 그리기
 #----------------------------------------------------------------------------
+
+# 시각화 할 값에 따른 색상의 범주를 지정해줍니다.
 color_breaks = [-150, -120, -100, -50, 0]
 color_stops = create_color_stops(color_breaks, colors='Spectral')
 
-#----------------------------------------------------------------------------
-# ChoroplethViz (지리적 영역 범위별 수치 데이터 값을 색(color)으로 표현) 그리기
-#----------------------------------------------------------------------------
 viz = ChoroplethViz(
     access_token=token, # 자신의 mapbox 계정 api token
     data=data, # json 데이터
