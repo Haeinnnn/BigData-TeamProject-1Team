@@ -18,7 +18,7 @@ with open(geo_data, encoding='UTF-8') as f:
 #============================================================================
 # mapbox에서 Access tokens url 가져오기
 #============================================================================
-token = 'pk.eyJ1IjoiZWVoZWFpbmVlIiwiYSI6ImNsM3RpZjFpczA5aXIzY3FwdHpyeHdvc2MifQ.k8l5ufgjLjeXxBmnyyC10A'
+token = '토큰url입력'
 
 #============================================================================
 # 서울시 중심부의 경도, 위도 입력
