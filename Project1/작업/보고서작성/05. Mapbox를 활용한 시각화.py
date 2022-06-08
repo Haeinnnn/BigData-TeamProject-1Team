@@ -11,7 +11,7 @@ import os # 현재 디렉토리의 파일을 호출하는 파이썬 라이브러
 from mapboxgl.utils import create_color_stops # 색을 입히기 위한 파이썬 라이브러리
 
 # ============================================================================================
-# crime 파일 불러와서 시각화 하기
+# crime 파일 불러와서 시각화 하기 # 나머지 Pub, Oneperson, CCTV도 파일과 기준바꿔서 하기
 # ============================================================================================
 geo_data = 'Seoul_crime.geo.json' # 미리만들어둔 지도 geojson 파일
 
@@ -39,7 +39,7 @@ viz = ChoroplethViz(
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
     zoom=10, # 지도의 줌 레벨
-    label_property='crime') # 지도에 영문이름 출력
+    label_property='name') # 지도에 구 이름 같이 출력
 
 # 맵을 출력
 viz.show()
