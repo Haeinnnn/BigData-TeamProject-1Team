@@ -132,7 +132,7 @@ viz = ChoroplethViz(
     color_stops=color_stops, # 시각화할 색상과 각 색상의 범주 값
     center=center, # 지도의 중심점
     zoom=10, # 지도의 줌 레벨
-    below_layer='waterway-label') # 지도에 영문이름 출력
+    below_layer='waterway-label') # 지도에 영문이름 출력 # 이거 쓰면 안됨 데이터 일부 출력안됨 ㅡㅡ
 
 # 맵을 출력합니다.
 viz.show()
