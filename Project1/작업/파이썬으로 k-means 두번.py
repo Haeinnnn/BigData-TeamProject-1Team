@@ -78,8 +78,6 @@ data_K.groupby('cluster').mean()
 # 차원 축소를 통해 4개의 변수를 2개로 축소
 #========================================
 
-
-
 from sklearn.decomposition import PCA 
 X = scaler.copy() # 표준화 변수를 copy한 새로운 변수 'X'를 만들어 PCA를 적용
 
