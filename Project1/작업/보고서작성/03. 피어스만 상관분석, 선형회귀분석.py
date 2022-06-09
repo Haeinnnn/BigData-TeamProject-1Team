@@ -49,3 +49,7 @@ res = smf.ols(formula='Crime ~ Police + CCTV + Oneperson + Pub', data=data).fit(
 print(res.summary())
 
 # 출처 : https://m.blog.naver.com/kiddwannabe/221763497317
+
+# smf : 라이브러리가 r형식의 함수를 쓸 수 있게 해줌
+# ols model : 최소제곱법을 사용해 회귀모형을 만듦
+# fit : 모형을 데이터에 적합하고 결과를 담고 있는 객체 RegressionResults를 반환
