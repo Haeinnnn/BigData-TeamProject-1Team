@@ -134,7 +134,7 @@ scaler_KK = pd.DataFrame(scaler_KK)
 scaler_KK
 
 #========================================
-# 자동으로 k를 찾는 k-means
+# 자동으로 k를 찾는 k-means 엘보우 기법
 #========================================
 
 from yellowbrick.cluster import KElbowVisualizer
