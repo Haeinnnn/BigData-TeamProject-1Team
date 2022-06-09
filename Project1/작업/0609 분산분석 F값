@@ -1,0 +1,28 @@
+from statsmodels.formula.api import ols
+from statsmodels.stats.anova import anova_lm
+
+formula='Crime ~ Police + CCTV + Oneperson + Pub'
+lm = ols(formula, data).fit()
+print(anova_lm(lm))
+
+# 분산분석 = ANOVA
+# 집단간의 차이를 검정한다
+# 집단 간 통계량값을 집단 내 통계량값으로 나눈 값
+# degree of freedom = 자유도
+# sum of squares = 제곱합
+# mean squares =  평균제곱
+# f-statistic =  f값
+# pr은 f의 p-value값
+
+# T-test 를 하게 되면 T, P 값이
+# ANOVA 를 하게 되면 F, P 값이
+# 회귀분석에서는 F, T, P 값이
+# 교차분석에서는 X^2, P 값이 나오게 된다.
+# 이렇게 T 값이 계산되어 나왔을때 원래는 p값을 찾는데 이걸 컴퓨터가 해주므로
+# ex) 집단간 통계량값을 집단 내 통계량값으로 나눈게 t값인데
+# ex) 이 T 값을 가지고 어떤 기준치(기각역, 임계치 라고 함)와 서로 비교를 하게 되는데,
+# 그 기준치는 유의수준이 0.05가 되게 하는 값이다.
+
+# 그러니까 사실 T값은 P값임
+# Residual는 잔차, 회귀식과 관측값 사이에 나타나는 차이
+# 출처 : https://blog.naver.com/ooohai/20096182642
