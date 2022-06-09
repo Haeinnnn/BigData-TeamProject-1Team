@@ -113,20 +113,16 @@ axs = sns.scatterplot(0, 1, hue='cluster', data=pca_df)
 
 
 #========================================
+# 군집분석 후에 나온 그룹1을 가지고 한번 더 클러스터
 #========================================
-
-
-# 한번 더 클러스터
 
 data_KK = data_K[data_K['cluster']== 1]
-data_KK # 다시 클러스터하려고
+data_KK # 변수명은 k는 한번 kk 두번이라
 
 
 #========================================
+# 그룹1로 데이터 표준화
 #========================================
-
-
-# 한번 더 데이터 표준화
 
 from sklearn.preprocessing import StandardScaler
 # Standardization 평균 0 / 분산 1
