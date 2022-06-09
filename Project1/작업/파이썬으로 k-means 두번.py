@@ -2,10 +2,10 @@
 # 불필요한 데이터 제거
 #========================================
 
-data_K = data.drop( "Police", axis=1)
-data_K = data_K.drop("District", axis=1)
-data_K = data_K.drop("Unnamed: 0", axis=1)
-data_K
+dataa = data.drop( "Police", axis=1)
+dataa = dataa.drop("District", axis=1)
+dataa = dataa.drop("Unnamed: 0", axis=1)
+dataa
 
 
 #========================================
@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler
 # Standardization 평균 0 / 분산 1
 
 scaler = StandardScaler()   
-scaler = scaler.fit_transform(data_K)
+scaler = scaler.fit_transform(dataa)
 
 scaler = pd.DataFrame(scaler)
 scaler
