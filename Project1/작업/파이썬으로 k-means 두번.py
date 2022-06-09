@@ -79,9 +79,6 @@ data_K.groupby('cluster').mean()
 #========================================
 
 
-# 5개의 변수를 2개의 변수로 줄이는 작업을 통해, 2차원 그래프로 나타내봅니다.
-# 이것이 바로 '차원 축소'인데요,
-# 대표적인 차원 축소 방법인 PCA(Principal Component Analysis)를 수행합니다.
 
 from sklearn.decomposition import PCA 
 X = scaler.copy() # 표준화 변수를 copy한 새로운 변수 'X'를 만들어 PCA를 적용
@@ -95,6 +92,9 @@ x_pca = pca.transform(X)
 x_pca
 
 
+# 5개의 변수를 2개의 변수로 줄이는 작업을 통해, 2차원 그래프로 나타내봅니다.
+# 이것이 바로 '차원 축소'인데요,
+# 대표적인 차원 축소 방법인 PCA(Principal Component Analysis)를 수행합니다.
 #========================================
 #========================================
 
