@@ -1,33 +1,29 @@
+#========================================
 # 불필요한 데이터 제거
+#========================================
 
-dataa = data.drop( "Police", axis=1)
-dataa = dataa.drop("District", axis=1)
-dataa = dataa.drop("Unnamed: 0", axis=1)
-dataa
+data_K = data.drop( "Police", axis=1)
+data_K = data_K.drop("District", axis=1)
+data_K = data_K.drop("Unnamed: 0", axis=1)
+data_K
 
 
 #========================================
-#========================================
-
-
 # 데이터 표준화
-
+#========================================
 from sklearn.preprocessing import StandardScaler
 # Standardization 평균 0 / 분산 1
 
 scaler = StandardScaler()   
-scaler = scaler.fit_transform(dataa)
+scaler = scaler.fit_transform(data_K)
 
 scaler = pd.DataFrame(scaler)
 scaler
 
 
 #========================================
+# 자동으로 k를 찾는 k-means 엘보우 기법
 #========================================
-
-
-# 자동으로 k를 찾는 k-means
-
 from yellowbrick.cluster import KElbowVisualizer
 
 model = KMeans()
