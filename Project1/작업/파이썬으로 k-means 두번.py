@@ -108,9 +108,6 @@ pca_df.head()
 # 시각화하기
 #========================================
 
-
-
-
 axs = plt.subplots()
 axs = sns.scatterplot(0, 1, hue='cluster', data=pca_df)
 
