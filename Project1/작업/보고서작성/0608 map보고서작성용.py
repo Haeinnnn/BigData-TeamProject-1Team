@@ -57,3 +57,4 @@ viz.show()
 # 출처 : https://dailyheumsi.tistory.com/145
 # 출처 : https://m.blog.naver.com/kiddwannabe/221763497317
 # 출처 : https://suy379.tistory.com/51
+# 컬러팔레트 참고 : https://www.colorion.co/related/D3D3D3
