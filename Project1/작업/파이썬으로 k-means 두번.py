@@ -24,7 +24,6 @@ scaler
 #========================================
 # 자동으로 k를 찾는 k-means 엘보우 기법
 #========================================
-# !pip install -U yellowbrick
 from yellowbrick.cluster import KElbowVisualizer
 
 model = KMeans()
