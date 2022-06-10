@@ -22,7 +22,8 @@ sns.heatmap(sea,
             mask=mask,      # 표시하지 않을 마스크 부분을 지정한다
             linewidths=.5,  # 경계면 실선으로 구분하기
             cbar_kws={"shrink": .5},# 컬러바 크기 절반으로 줄이기
-            vmin = -1,vmax = 1   # 컬러바 범위 -1 ~ 1
+            vmin = -1,vmax = 1,   # 컬러바 범위 -1 ~ 1
+            annot_kws={'size':35} # 컬러바 폰트 사이즈
            )  
 plt.show()
 
