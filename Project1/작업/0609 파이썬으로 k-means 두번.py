@@ -110,6 +110,7 @@ pca_df.head()
 
 axs = plt.subplots()
 axs = sns.scatterplot(0, 1, hue='cluster', data=pca_df)
+# x축은 0 , y축은 1, 묶는건 클러스터로 묶음
 
 
 #========================================
