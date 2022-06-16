@@ -58,3 +58,17 @@ viz.show()
 # 출처 : https://m.blog.naver.com/kiddwannabe/221763497317
 # 출처 : https://suy379.tistory.com/51
 # 컬러팔레트 참고 : https://www.colorion.co/related/D3D3D3
+
+# 전체적으로 색 바꾸기
+# sns.set_palette(sns.color_palette(['#d9534f', '#5bc0de', '#5cb85c', '#428bca', '#fcd5ce']))
+
+sns.lineplot(x = 'CCTV', y = 'Crime', hue="cluster", # line으로 시각화를 표현함
+                     style='cluster', # cluster에 따라서 스타일을 다르게
+                     markers= True, # 점을 다르게 찍어주는거
+                     dashes=False, data = data_KK) # 점선같은거 다르게 찍어주는거
+
+# sns.barplot # bar로 시각화를 표현함
+
+# 필요한 그래프만 그릴 수 있게 한번에! 추출하기
+# dis = ['종로구', '동작구', '동대문구', '관악구']
+# new = data_KK[data_KK['district'].isin(dis)]
